@@ -14,7 +14,6 @@ const errorHandlerMiddleware: ErrorRequestHandler = (err, _req: Request, res: Re
   }
 
   if (err instanceof Error) {
-    console.log("err---", err);
     res.status(400).json({ msg: err?.message });
     return;
   }

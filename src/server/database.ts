@@ -16,7 +16,6 @@ export async function databaseConnect(): Promise<void> {
         await sequelize.sync();
         logger.info('Postgres database connection has been established succesfuly.')
     } catch (error) {
-        console.log("error", error)
         logger.error('Unable to connect to database.', error);
     }
 }
